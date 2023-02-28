@@ -10,4 +10,5 @@ function addList() {
 	else{
 		alert("add some Text")
 	}
+	document.getElementById("newTodoInput").value=""
 }

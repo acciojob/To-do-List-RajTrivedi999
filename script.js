@@ -1,8 +1,13 @@
-document.getElementById("addTodoBtn").onClick = function() {
+let btn=document.getElementById("addTodoBtn")
+btn.addEventListener('click',addList)
 
-    var text = document.getElementById("newTodoInput").value;
-
-    var li = "<li>" + text + "</li>";
-
-    document.getElementById("todoList").appendChild(li);
+function addList() {
+	if(document.getElementById("newTodoInput").value!=""){
+		let newListElement=document.createElement("li")
+		newListElement.innerText=document.getElementById("newTodoInput").value
+		todoList.appendChild(newListElement)
+	}
+	else{
+		alert("add some Text")
+	}
 }
